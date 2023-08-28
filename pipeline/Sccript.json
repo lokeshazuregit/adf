@@ -1,0 +1,45 @@
+{
+	"name": "Sccript",
+	"properties": {
+		"activities": [
+			{
+				"name": "Script1",
+				"type": "Script",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"linkedServiceName": {
+					"referenceName": "AzureSqlDatabase1",
+					"type": "LinkedServiceReference"
+				},
+				"typeProperties": {
+					"scripts": [
+						{
+							"type": "Query",
+							"text": {
+								"value": "select * from emp where deptno=@{pipeline().parameters.deppara}\nselect * from emp where job=@{pipeline().parameters.jobpara}",
+								"type": "Expression"
+							}
+						}
+					],
+					"scriptBlockExecutionTimeout": "02:00:00"
+				}
+			}
+		],
+		"parameters": {
+			"deppara": {
+				"type": "int"
+			},
+			"jobpara": {
+				"type": "string"
+			}
+		},
+		"annotations": []
+	}
+}
