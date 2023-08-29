@@ -21,15 +21,8 @@
 						"partitionOption": "None"
 					},
 					"sink": {
-						"type": "DelimitedTextSink",
-						"storeSettings": {
-							"type": "AzureBlobStorageWriteSettings"
-						},
-						"formatSettings": {
-							"type": "DelimitedTextWriteSettings",
-							"quoteAllText": true,
-							"fileExtension": ".txt"
-						}
+						"type": "AzureSqlSink",
+						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
 					"translator": {
@@ -49,10 +42,27 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedText1",
+						"referenceName": "AzureSqlTable1",
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Fail1",
+				"type": "Fail",
+				"dependsOn": [
+					{
+						"activity": "Copy data1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"message": "Intentionally Failed",
+					"errorCode": "Intentionionally Failed"
+				}
 			}
 		],
 		"annotations": []
