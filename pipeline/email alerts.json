@@ -1,9 +1,9 @@
 {
-	"name": "Failed email alerts",
+	"name": "email alerts",
 	"properties": {
 		"activities": [
 			{
-				"name": "Web1",
+				"name": "Execution Start Alert",
 				"type": "WebActivity",
 				"dependsOn": [],
 				"policy": {
@@ -28,7 +28,7 @@
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
-						"activity": "Web1",
+						"activity": "Execution Start Alert",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -44,7 +44,7 @@
 				}
 			},
 			{
-				"name": "Web1_copy1",
+				"name": "Succes Web Alert",
 				"type": "WebActivity",
 				"dependsOn": [
 					{
@@ -72,7 +72,7 @@
 				}
 			},
 			{
-				"name": "Web1_copy2",
+				"name": "Failed Web Alert",
 				"type": "WebActivity",
 				"dependsOn": [
 					{
