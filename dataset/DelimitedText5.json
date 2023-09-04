@@ -14,7 +14,6 @@
 					"value": "@concat('studentdetails_startingdate',adddays(startOfDay(utcnow()),-1,'ddmmyyyy'),'_enddate',formatDateTime(utcnow(),'ddmmyyyy'),'.csv')",
 					"type": "Expression"
 				},
-				"folderPath": "opfolder",
 				"container": "dynamicnamechnge"
 			},
 			"columnDelimiter": ",",
