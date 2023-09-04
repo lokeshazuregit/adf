@@ -1,0 +1,27 @@
+{
+	"name": "DelimitedText5",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@concat('studentdetails_startingdate',adddays(startOfDay(utcnow()),-1,'ddmmyyyy'),'_enddate',formatDateTime(utcnow(),'ddmmyyyy'),'.csv')",
+					"type": "Expression"
+				},
+				"folderPath": "opfolder",
+				"container": "dynamicnamechnge"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
