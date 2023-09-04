@@ -19,7 +19,6 @@
 					"value": "@concat(dataset().name,'_output.csv')",
 					"type": "Expression"
 				},
-				"folderPath": "op",
 				"container": "dynamicopparameter"
 			},
 			"columnDelimiter": ",",
