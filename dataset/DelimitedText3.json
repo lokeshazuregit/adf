@@ -1,0 +1,44 @@
+{
+	"name": "DelimitedText3",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"fieldname": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().fieldname",
+					"type": "Expression"
+				},
+				"container": "lokeshcontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "DEPTNO",
+				"type": "String"
+			},
+			{
+				"name": "DNAME",
+				"type": "String"
+			},
+			{
+				"name": "LOC",
+				"type": "String"
+			}
+		]
+	}
+}
