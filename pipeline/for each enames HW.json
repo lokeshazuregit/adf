@@ -130,6 +130,9 @@
 				"defaultValue": []
 			}
 		},
+		"folder": {
+			"name": "Scenarios"
+		},
 		"annotations": [],
 		"lastPublishTime": "2023-08-23T06:43:00Z"
 	},

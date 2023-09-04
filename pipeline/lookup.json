@@ -37,6 +37,9 @@
 				"type": "int"
 			}
 		},
+		"folder": {
+			"name": "Activities"
+		},
 		"annotations": []
 	}
 }

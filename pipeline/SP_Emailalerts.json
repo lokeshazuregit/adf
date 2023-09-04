@@ -318,6 +318,9 @@
 				"defaultValue": "FAILED"
 			}
 		},
+		"folder": {
+			"name": "Scenarios"
+		},
 		"annotations": []
 	}
 }

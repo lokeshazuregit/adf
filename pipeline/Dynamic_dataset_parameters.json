@@ -78,6 +78,9 @@
 				"type": "string"
 			}
 		},
+		"folder": {
+			"name": "Scenarios"
+		},
 		"annotations": []
 	}
 }
