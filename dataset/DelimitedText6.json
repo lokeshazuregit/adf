@@ -1,5 +1,5 @@
 {
-	"name": "DelimitedText1",
+	"name": "DelimitedText6",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorage1",
@@ -16,29 +16,17 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": {
-					"value": "@concat(dataset().name,'.csv')",
+					"value": "@concat(dataset().name,'_output.csv')",
 					"type": "Expression"
 				},
-				"container": "lokeshcontainer"
+				"folderPath": "op",
+				"container": "dynamicopparameter"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
-		"schema": [
-			{
-				"name": "DEPTNO",
-				"type": "String"
-			},
-			{
-				"name": "DNAME",
-				"type": "String"
-			},
-			{
-				"name": "LOC",
-				"type": "String"
-			}
-		]
+		"schema": []
 	}
 }
