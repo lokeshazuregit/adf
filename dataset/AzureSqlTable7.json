@@ -1,0 +1,27 @@
+{
+	"name": "AzureSqlTable7",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase2",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"sink": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@split(dataset().sink,'.')[0]",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@split(dataset().sink,'.')[1]",
+				"type": "Expression"
+			}
+		}
+	}
+}
