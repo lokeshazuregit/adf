@@ -1,0 +1,48 @@
+{
+	"name": "DelimitedText9",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Book1.csv",
+				"container": "lokeshcontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Sno",
+				"type": "String"
+			},
+			{
+				"name": "Schema_name",
+				"type": "String"
+			},
+			{
+				"name": "Table_name",
+				"type": "String"
+			},
+			{
+				"name": "Query",
+				"type": "String"
+			},
+			{
+				"name": "Dest_Schema",
+				"type": "String"
+			},
+			{
+				"name": "Dest_table",
+				"type": "String"
+			}
+		]
+	}
+}

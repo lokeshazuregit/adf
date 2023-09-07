@@ -1,0 +1,30 @@
+{
+	"name": "AzureSqlTable8",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase2",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"sr_schema": {
+				"type": "string"
+			},
+			"sr_table": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().sr_schema",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().sr_table",
+				"type": "Expression"
+			}
+		}
+	}
+}
