@@ -77,7 +77,7 @@
 								"sink": {
 									"type": "AzureSqlSink",
 									"preCopyScript": {
-										"value": "@{concat('Truncate table ',item().Dest_Schema,'.',item().Dest_table)}",
+										"value": "@{concat('truncate table ',item().Dest_Schema,'.',item().Dest_table)}",
 										"type": "Expression"
 									},
 									"writeBehavior": "insert",
@@ -97,7 +97,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "AzureSqlTable8",
+									"referenceName": "AzureSqlTable11",
 									"type": "DatasetReference",
 									"parameters": {
 										"sr_schema": {
@@ -113,7 +113,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "AzureSqlTable9",
+									"referenceName": "AzureSqlTable12",
 									"type": "DatasetReference",
 									"parameters": {
 										"ds_schema": {
