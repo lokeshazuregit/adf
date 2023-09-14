@@ -55,7 +55,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "EMP"
+			"table": "empp"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
